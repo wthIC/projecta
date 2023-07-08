@@ -1,0 +1,6 @@
+﻿. Add the character moving around
+. Figure out the screen size and adjustements
+. Add the character dodge rolling
+. Figure out looking around
+. Add mouse dragging mecahnic
+. Plan ahead
