@@ -4,12 +4,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace ProjectA
 {
-    public class Game1 : Game
+    public class Game : Microsoft.Xna.Framework.Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Game1()
+        private Player convict;
+
+        public Game()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -27,6 +29,9 @@ namespace ProjectA
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            Texture2D texture = Content.Load<Texture2D>("convict");
+            convict = new Player(texture, 1, 6);
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -36,6 +41,8 @@ namespace ProjectA
                 Exit();
 
             // TODO: Add your update logic here
+
+            convict.Update();
 
             base.Update(gameTime);
         }
@@ -47,6 +54,8 @@ namespace ProjectA
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+
+            convict.Draw(_spriteBatch, new Vector2(400, 200));
         }
     }
 }

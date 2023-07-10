@@ -1,4 +1,5 @@
 ﻿. Add the character moving around
+. Add gitignore
 . Figure out the screen size and adjustements
 . Add the character dodge rolling
 . Figure out looking around
